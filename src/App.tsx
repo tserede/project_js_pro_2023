@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { CounterComponent } from './CounterComponent';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CounterComponent image={'./flower.jpeg'} title={'Гортензия белая'} price={2890} />
+      <CounterComponent
+        image={'Здесь будет картинка'}
+        title={'Диантусы в коробке c эвкалиптом'}
+        price={3790}
+      />
+      <CounterComponent
+        image={'Здесь будет картинка'}
+        title={'Букет крупных роз премиум «Candlelight»'}
+        price={4590}
+      />
     </div>
   );
 }
