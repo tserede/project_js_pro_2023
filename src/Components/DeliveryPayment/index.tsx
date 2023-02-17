@@ -1,10 +1,10 @@
 import React from 'react';
-import style from './DeliveryPayment.module.scss';
+import style from './Deliverypayment.module.scss'
 
 export const DeliveryPayment = () => {
   return (
-    <main className={style.delivery_wrapper}>
+    <div className={style.wrapper}>
       <h1>Доставка</h1>
-    </main>
+    </div>
   );
 };

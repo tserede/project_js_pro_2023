@@ -1,13 +1,15 @@
+import { routes } from 'Constants/routes';
 import { Delivery } from 'Conteiners/Delivery';
 import { Main } from 'Conteiners/Main';
 import React from 'react';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    // <Main />
-    <Delivery />
-  );
+    <Routes>
+      <Route path={routes.main} element={<Main />} />
+      <Route path={routes.delivery} element={<Delivery />} />
+    </Routes>
+  )
 }
-
 export default App;

@@ -12,18 +12,12 @@
   },
   "plugins": ["react"],
   "rules": {
-    "semi": "off",
     "@typescript-eslint/semi": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
-    "space-before-function-paren": "off",
     "@typescript-eslint/space-before-function-paren": "off",
-    "comma-dangle": "off",
     "@typescript-eslint/comma-dangle": "off",
-    "no-unused-vars": "off",
-    "@typescript-eslint/member-delimiter-style": "off",
-    "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/consistent-type-definitions": "off",
-    "@typescript-eslint/no-floating-promises": "error",
+    "@typescript-eslint/member-delimiter-style": "off",
     "@typescript-eslint/strict-boolean-expressions": "off",
     "multiline-ternary": "off"
   }
