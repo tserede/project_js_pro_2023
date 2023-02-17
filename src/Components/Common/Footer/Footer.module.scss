@@ -1,0 +1,13 @@
+.wrapper{
+    height: 60px;
+    text-align: center;
+    background-color: #3b3b3b;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .text{
+        font-size: 25px;
+    }
+}
