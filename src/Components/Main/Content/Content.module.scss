@@ -5,3 +5,12 @@
     height: 100%;
     flex-direction: column;
 }
+.product_wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+    font-size: 7px;
+    // background-color: aqua;
+    width: 1240px;
+    flex-wrap: wrap;
+}
