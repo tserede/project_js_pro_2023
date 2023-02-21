@@ -1,21 +1,32 @@
+header{
+  position: sticky;
+  z-index: 3;
+  background-color: aliceblue;
+  top: 0;
+  width: 100vw;
+}
 .wrapper {
   height: 100px;
+  width: 100%;
   padding: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
   background-image: linear-gradient(90deg, #f36d4bba 1%, #f84a73f3 98%);
   color: aliceblue;
   font-weight: 800;
   font-size: 12px;
   letter-spacing: -0.3px;
+  max-width: 1480px;
 
   & > nav {
     display: flex;
-    gap: 15px;
+    gap: 13px;
     list-style-type: none;
     padding: 10px;
-    margin: 0;
+    margin: 3px 0 0 0;
+    width: 500px;
+    // background-color: aqua;
   }
   a {
     color: #fff;
@@ -30,9 +41,54 @@
     font-size: 50px;
     // background-color: aqua;
     width: 500px;
-    text-align: center
+    align-items: start;
+    text-align: start;
+    margin: 0 0 0 120px;
+
   }
   .cart{
     width: 500px;
+  }
+  .text_auth{
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.2px;
+    width: 150px;
+    // background-color: aqua;
+    align-items: center;
+    display: inline-block;
+    margin: 12px 0 0 0;
+    
+  }
+  .icon_cart{
+    width: 35px;
+    height: 35px;
+    // background-color: aquamarine;
+    margin: 9px 0 0 0;
+  }
+  .wrap_right{
+    display: flex;
+    flex-direction: row;
+    // background-color: red;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0 0 0 200px;
+    margin: 15px 0 0 0;
+    width: 250px;
+  }
+  .icon_flower{
+    margin: 20px 0 0 0;
+    width: 70px;
+  }
+  .wrap_cart{
+    display: flex;
+  }
+  .counter_cart{
+    border: 2px solid white;
+    border-radius: 50px;
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    color: #333;
   }
 }

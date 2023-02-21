@@ -1,11 +1,11 @@
 import { PageWrapper } from 'Components/Common/PageWrapper';
-import { ContactsInfo } from 'Components/Contacts';
+import { CorporateClients } from 'Components/CorporateСlients';
 import React from 'react';
-export const Contacts = () => {
+export const Corporate = () => {
   return (
     <div className="page_wrapper">
       <PageWrapper>
-        <ContactsInfo />
+      <CorporateClients />
       </PageWrapper>
     </div>
   );

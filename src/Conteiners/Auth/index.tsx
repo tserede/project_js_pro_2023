@@ -1,11 +1,11 @@
+import { AuthForm } from 'Components/Auth';
 import { PageWrapper } from 'Components/Common/PageWrapper';
-import { ContactsInfo } from 'Components/Contacts';
 import React from 'react';
-export const Contacts = () => {
+export const Auth = () => {
   return (
     <div className="page_wrapper">
       <PageWrapper>
-        <ContactsInfo />
+        <AuthForm />
       </PageWrapper>
     </div>
   );

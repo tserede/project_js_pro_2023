@@ -1,11 +1,11 @@
+import { CartPage } from 'Components/Cart';
 import { PageWrapper } from 'Components/Common/PageWrapper';
-import { ContactsInfo } from 'Components/Contacts';
 import React from 'react';
-export const Contacts = () => {
+export const Cart = () => {
   return (
     <div className="page_wrapper">
       <PageWrapper>
-        <ContactsInfo />
+        <CartPage />
       </PageWrapper>
     </div>
   );

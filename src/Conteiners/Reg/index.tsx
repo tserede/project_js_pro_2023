@@ -1,11 +1,11 @@
 import { PageWrapper } from 'Components/Common/PageWrapper';
-import { ContactsInfo } from 'Components/Contacts';
+import { RegForm } from 'Components/Reg';
 import React from 'react';
-export const Contacts = () => {
+export const Reg = () => {
   return (
     <div className="page_wrapper">
       <PageWrapper>
-        <ContactsInfo />
+        <RegForm />
       </PageWrapper>
     </div>
   );
