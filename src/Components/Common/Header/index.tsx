@@ -3,6 +3,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import style from './Header.module.scss';
 export const Header = () => {
+  // const [countCart, setCountCart] = useState(0);
+  // useEffect(() => {
+  //   setCountCart((prevCountCart) => prevCountCart + 1);
+  // }, [count]);
   return (
     <header className={style.wrapper}>
       <nav>
@@ -30,7 +34,7 @@ export const Header = () => {
               <img className={style.icon_cart} src="./icon-cart.png" />
             </Link>
           </div>
-          <div className={style.counter_cart}>1</div>
+          <div className={style.counter_cart}>?</div>
         </div>
         <div className={style.text_auth}>
           <span>

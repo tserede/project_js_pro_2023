@@ -9,12 +9,20 @@ type CounterPropsType = {
 };
 export const CounterComponent = (props: CounterPropsType) => {
   const { title, image, price } = props;
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
+  const [isProductAdd, setisProductAdd] = useState(false);
+  // const [countCart, setCountCart] = useState(0);
+  // useEffect(() => {
+  //   setCountCart((prevCountCart) => prevCountCart + 1);
+  // }, [count]);
   const incrementHandler = () => {
     setCount((prev) => prev + 1);
   };
   const decrementHandler = () => {
     setCount((prev) => prev - 1);
+  };
+  const addToCard = () => {
+    setisProductAdd((prevState) => !prevState);
   };
   const sum: number = price * count;
   return (
@@ -22,11 +30,13 @@ export const CounterComponent = (props: CounterPropsType) => {
       <div>
         <img src={image} width="262px" alt="img" />
       </div>
-      <div className={style.text_wrapper}><span>{title}</span></div>
+      <div className={style.text_wrapper}>
+        <span>{title}</span>
+      </div>
       <h2 className={style.price}>{sum || price} ₽</h2>
       <div className={style.counter_wrapper_value}>
         <div className={style.button_wrapper}>
-          <button disabled={count === 0} className={style.button_count} onClick={decrementHandler}>
+          <button className={style.button_count} disabled={count === 1} onClick={decrementHandler}>
             -
           </button>
           <h2>{count}</h2>
@@ -34,7 +44,9 @@ export const CounterComponent = (props: CounterPropsType) => {
             +
           </button>
         </div>
-        <button className={style.btn_cart}>В КОРЗИНУ</button>
+        <button className={style.btn_cart} onClick={addToCard}>
+          {isProductAdd ? 'УДАЛИТЬ' : 'В КОРЗИНУ'}
+        </button>
       </div>
     </div>
   );
