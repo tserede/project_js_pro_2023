@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { CartSelectors, CartCounterSliceActions } from 'Store';
 import style from './counter.module.scss';
 
 type CounterPropsType = {
@@ -11,18 +13,24 @@ export const CounterComponent = (props: CounterPropsType) => {
   const { title, image, price } = props;
   const [count, setCount] = useState(1);
   const [isProductAdd, setisProductAdd] = useState(false);
-  // const [countCart, setCountCart] = useState(0);
-  // useEffect(() => {
-  //   setCountCart((prevCountCart) => prevCountCart + 1);
-  // }, [count]);
+  const dispatch = useDispatch();
+  const cartCounter = useSelector(CartSelectors.getCartCounter);
+
+  const addToCard = () => {
+    setisProductAdd((prevState) => !prevState);
+    if (!isProductAdd) {
+      dispatch(CartCounterSliceActions.setIncrementCartCounter({ counter: 1 }));
+    } else {
+      dispatch(CartCounterSliceActions.setDecrementCartCounter({ counter: 0 }));
+    }
+    console.log('cartCounter', cartCounter);
+  };
+
   const incrementHandler = () => {
     setCount((prev) => prev + 1);
   };
   const decrementHandler = () => {
     setCount((prev) => prev - 1);
-  };
-  const addToCard = () => {
-    setisProductAdd((prevState) => !prevState);
   };
   const sum: number = price * count;
   return (

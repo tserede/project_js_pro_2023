@@ -2,10 +2,11 @@ import { routes } from 'Constants/routes';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { UserSelectors, UserSliceActions } from 'Store';
+import { CartSelectors, UserSelectors, UserSliceActions } from 'Store';
 import style from './Header.module.scss';
 export const Header = () => {
   const userEmail = useSelector(UserSelectors.getUserEmail);
+  const cartCounter = useSelector(CartSelectors.getCartCounter);
   const dispatch = useDispatch();
   const logoutHandler = () => {
     dispatch(UserSliceActions.ClearUserData());
@@ -37,7 +38,7 @@ export const Header = () => {
               <img className={style.icon_cart} src="./icon-cart.png" />
             </Link>
           </div>
-          <div className={style.counter_cart}>?</div>
+          <div className={style.counter_cart}>{cartCounter}</div>
         </div>
         <div className={style.text_auth}>
           {userEmail ? (
