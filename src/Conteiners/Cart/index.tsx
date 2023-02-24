@@ -1,12 +1,12 @@
 import { CartPage } from 'Components/Cart';
-import { PageWrapper } from 'Components/Common/PageWrapper';
+import { CheckAuth } from 'Components/Common/CheckAuth';
 import React from 'react';
 export const Cart = () => {
   return (
     <div className="page_wrapper">
-      <PageWrapper>
+      <CheckAuth>
         <CartPage />
-      </PageWrapper>
+        </CheckAuth>
     </div>
   );
 };

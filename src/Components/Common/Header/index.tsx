@@ -1,11 +1,15 @@
 import { routes } from 'Constants/routes';
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { UserSelectors } from 'Store';
+import { UserSelectors, UserSliceActions } from 'Store';
 import style from './Header.module.scss';
 export const Header = () => {
   const userEmail = useSelector(UserSelectors.getUserEmail);
+  const dispatch = useDispatch();
+  const logoutHandler = () => {
+    dispatch(UserSliceActions.ClearUserData());
+  };
   return (
     <header className={style.wrapper}>
       <nav>
@@ -37,7 +41,10 @@ export const Header = () => {
         </div>
         <div className={style.text_auth}>
           {userEmail ? (
-            <span className={style.name}>{userEmail}</span>
+            <div>
+              <span className={style.name}>{userEmail}</span>
+              <button onClick={logoutHandler} type="button">Выйти</button>
+            </div>
           ) : (
             <>
               <span>
