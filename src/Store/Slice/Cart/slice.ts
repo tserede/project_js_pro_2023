@@ -8,7 +8,7 @@ const cartCounterSlice = createSlice({
   initialState,
   reducers: {
     setIncrementCartCounter(state, { payload: { counter } }: PayloadAction<{ counter: number }>) {
-      return { ...state, counter: state.counter + 1 };
+      return { ...state, counter: state.counter + counter };
     },
     setDecrementCartCounter(state, { payload: { counter } }: PayloadAction<{ counter: number }>) {
       return { ...state, counter: state.counter - 1 };

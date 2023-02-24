@@ -3,7 +3,7 @@ import React from 'react';
 export const Main = () => {
   return (
     <div className='page_wrapper'>
-      <Content />
+      <Content ProductListData={[]} />
       </div>
   );
 };

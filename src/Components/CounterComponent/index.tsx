@@ -16,22 +16,22 @@ export const CounterComponent = (props: CounterPropsType) => {
   const dispatch = useDispatch();
   const cartCounter = useSelector(CartSelectors.getCartCounter);
 
-  const addToCard = () => {
-    setisProductAdd((prevState) => !prevState);
-    if (!isProductAdd) {
-      dispatch(CartCounterSliceActions.setIncrementCartCounter({ counter: 1 }));
-    } else {
-      dispatch(CartCounterSliceActions.setDecrementCartCounter({ counter: 0 }));
-    }
-    console.log('cartCounter', cartCounter);
-  };
-
   const incrementHandler = () => {
     setCount((prev) => prev + 1);
   };
   const decrementHandler = () => {
     setCount((prev) => prev - 1);
   };
+  const addToCard = () => {
+    setisProductAdd((prevState) => !prevState);
+    if (!isProductAdd) {
+      dispatch(CartCounterSliceActions.setIncrementCartCounter({ counter: 1 }));
+    } else {
+      dispatch(CartCounterSliceActions.setDecrementCartCounter({ counter: 1 }));
+    }
+    console.log('cartCounter', cartCounter);
+  };
+
   const sum: number = price * count;
   return (
     <div className={style.counter_wrapper}>
